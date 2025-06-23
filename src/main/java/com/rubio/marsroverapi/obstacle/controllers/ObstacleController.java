@@ -1,6 +1,7 @@
 package com.rubio.marsroverapi.obstacle.controllers;
 
 import com.rubio.marsroverapi.obstacle.dto.ObstacleDto;
+import com.rubio.marsroverapi.obstacle.services.ObstacleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
