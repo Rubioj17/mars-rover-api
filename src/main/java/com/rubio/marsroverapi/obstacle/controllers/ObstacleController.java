@@ -1,4 +1,4 @@
-package com.rubio.marsroverapi.obstacle.controller;
+package com.rubio.marsroverapi.obstacle.controllers;
 
 import com.rubio.marsroverapi.obstacle.dto.ObstacleDto;
 import org.springframework.beans.factory.annotation.Autowired;
