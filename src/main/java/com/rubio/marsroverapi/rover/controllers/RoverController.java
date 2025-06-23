@@ -1,4 +1,4 @@
-package com.rubio.marsroverapi.rover.controller;
+package com.rubio.marsroverapi.rover.controllers;
 
 import com.rubio.marsroverapi.rover.dto.RoverDto;
 import com.rubio.marsroverapi.rover.dto.request.CommandRequestDto;
