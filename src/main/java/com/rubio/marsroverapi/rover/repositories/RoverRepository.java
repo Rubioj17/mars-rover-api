@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RoverRepository extends JpaRepository<Rover, Integer> {
+    boolean existsByPosXAndPosY(int posX, int posY);
 }
