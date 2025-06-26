@@ -11,8 +11,10 @@ public class RoverCommandExecutor {
     public RoverCommandExecutor(CommandFactory factory) {
         this.factory = factory;
     }
+
     public boolean execute(Rover rover, CommandRequestDto commandList) {
         boolean isObstacleEncountered = false;
+
         for (String code : commandList.getCommandList()) {
             RoverCommand command = factory.getCommand(code);
             isObstacleEncountered = command.execute(rover);
@@ -21,6 +23,7 @@ public class RoverCommandExecutor {
                 break;
             }
         }
+
         return isObstacleEncountered;
     }
 }
