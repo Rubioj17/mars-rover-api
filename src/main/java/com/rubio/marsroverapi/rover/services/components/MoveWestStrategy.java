@@ -1,0 +1,26 @@
+package com.rubio.marsroverapi.rover.services.components;
+
+import com.rubio.marsroverapi.rover.models.Rover;
+import com.rubio.marsroverapi.rover.validations.RoverValidation;
+import com.rubio.marsroverapi.shared.utilities.MapDimensions;
+
+import static com.rubio.marsroverapi.rover.utilities.CircularPosition.backward;
+
+public class MoveWestStrategy implements MoveStrategy {
+    private final RoverValidation roverValidation;
+
+    public MoveWestStrategy(RoverValidation roverValidation) {
+        this.roverValidation = roverValidation;
+    }
+
+    @Override
+    public boolean move(Rover rover) {
+        Integer posXRover = backward(rover.getPosX(), MapDimensions.width);
+        Integer posYRover = rover.getPosY();
+        if (roverValidation.isOccupied(posXRover, posYRover)) {
+            return true;
+        }
+        rover.setPosX(posXRover);
+        return false;
+    }
+}
