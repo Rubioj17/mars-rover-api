@@ -1,5 +1,8 @@
 package com.rubio.marsroverapi.obstacle.validations;
 
+import com.rubio.marsroverapi.shared.exceptions.ObstacleCollisionException;
+import com.rubio.marsroverapi.shared.utilities.MapDimensions;
+
 public class BoundsObstacleValidation implements ObstacleValidation {
     @Override
     public boolean isValid(int posX, int posY) {

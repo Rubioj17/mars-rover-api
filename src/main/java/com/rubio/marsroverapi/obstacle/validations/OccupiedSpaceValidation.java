@@ -2,6 +2,7 @@ package com.rubio.marsroverapi.obstacle.validations;
 
 import com.rubio.marsroverapi.obstacle.repositories.ObstacleRepository;
 import com.rubio.marsroverapi.rover.services.RoverPositionService;
+import com.rubio.marsroverapi.shared.exceptions.ObstacleCollisionException;
 import org.springframework.stereotype.Component;
 
 @Component
