@@ -8,6 +8,7 @@ import com.rubio.marsroverapi.rover.mappers.RoverMapper;
 import com.rubio.marsroverapi.rover.models.Rover;
 import com.rubio.marsroverapi.rover.repositories.RoverRepository;
 import com.rubio.marsroverapi.rover.services.components.RoverCommandExecutor;
+import com.rubio.marsroverapi.shared.exceptions.RoverNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
