@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 public class CommandResponseDto {
-    private RoverDto rover;
+    private RoverDto roverDto;
     private boolean obstacleEncountered;
 }

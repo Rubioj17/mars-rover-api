@@ -15,9 +15,10 @@ public class CommandResponseMapperImpl implements CommandResponseMapper {
     public CommandResponseDto toDto(Rover rover, boolean isObstacleEncountered) {
         RoverDto roverDto = roverMapper.toDto(rover);
         CommandResponseDto commandResponseDto = new CommandResponseDto();
-        commandResponseDto.setRover(roverDto);
+        commandResponseDto.setRoverDto(roverDto);
         commandResponseDto.setObstacleEncountered(isObstacleEncountered);
 
         return commandResponseDto;
     }
+
 }

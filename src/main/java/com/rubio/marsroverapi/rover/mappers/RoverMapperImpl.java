@@ -12,6 +12,7 @@ public class RoverMapperImpl implements RoverMapper {
         RoverDto dto = new RoverDto();
         dto.setPosX(rover.getPosX());
         dto.setPosY(rover.getPosY());
+        dto.setDirection(rover.getDirection());
 
         return dto;
     }
@@ -23,6 +24,7 @@ public class RoverMapperImpl implements RoverMapper {
         Rover entity = new Rover();
         entity.setPosX(roverDto.getPosX());
         entity.setPosY(roverDto.getPosY());
+        entity.setDirection(roverDto.getDirection());
 
         return entity;
     }

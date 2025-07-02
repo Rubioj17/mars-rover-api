@@ -69,4 +69,5 @@ class ObstacleMapperImplTest {
         //Despues
         Assertions.assertNull(result);
     }
+
 }
