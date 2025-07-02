@@ -1,5 +1,6 @@
 package com.rubio.marsroverapi.rover.services.components;
 
+import com.rubio.marsroverapi.shared.exceptions.InvalidCommandException;
 import org.springframework.stereotype.Component;
 
 @Component
