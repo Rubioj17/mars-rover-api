@@ -11,6 +11,7 @@ public class ObstaclePositionServiceImpl implements ObstaclePositionService {
     public ObstaclePositionServiceImpl(ObstacleRepository repository) {
         this.repository = repository;
     }
+
     @Override
     public boolean isObstacleAt(int posX, int posY) {
         //Tal vez seria buena idea no hacer esta consulta en cada momento

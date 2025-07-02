@@ -52,7 +52,6 @@ class ObstacleServiceImplTest {
         when(obstacleMapper.toDto(obstacle1)).thenReturn(obstacleDto1);
         when(obstacleMapper.toDto(obstacle2)).thenReturn(obstacleDto2);
 
-
         //Despues
         List<ObstacleDto> result = service.findAllObstacles();
 
@@ -89,8 +88,6 @@ class ObstacleServiceImplTest {
         ObstacleDto obstacleDto = new ObstacleDto(posX, posY);
 
         //Entonces
-        when(validation1.isValid(posX, posY)).thenReturn(true);
-        when(validation2.isValid(posX, posY)).thenReturn(true);
         when(obstacleMapper.toDto(any(Obstacle.class))).thenReturn(obstacleDto);
 
         //Despues

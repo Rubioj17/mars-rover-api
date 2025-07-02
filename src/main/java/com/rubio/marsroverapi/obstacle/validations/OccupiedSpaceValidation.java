@@ -16,7 +16,7 @@ public class OccupiedSpaceValidation implements ObstacleValidation {
     }
 
     @Override
-    public boolean isValid(int posX, int posY) {
+    public void isValid(int posX, int posY) {
         boolean obstaclePresent = repository.existsByPosXAndPosY(posX, posY);
         boolean roverPresent = roverPositionService.isRoverAt(posX, posY);
         if (obstaclePresent || roverPresent) {
@@ -24,6 +24,5 @@ public class OccupiedSpaceValidation implements ObstacleValidation {
                     "The coordinate (" + posX + ", " + posY + ") is already occupied"
             );
         }
-        return true;
     }
 }

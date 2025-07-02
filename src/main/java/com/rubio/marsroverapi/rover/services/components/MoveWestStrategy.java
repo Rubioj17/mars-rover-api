@@ -15,7 +15,7 @@ public class MoveWestStrategy implements MoveStrategy {
 
     @Override
     public boolean move(Rover rover) {
-        Integer posXRover = backward(rover.getPosX(), MapDimensions.width);
+        Integer posXRover = backward(rover.getPosX(), MapDimensions.WIDTH);
         Integer posYRover = rover.getPosY();
         if (roverValidation.isOccupied(posXRover, posYRover)) {
             return true;
