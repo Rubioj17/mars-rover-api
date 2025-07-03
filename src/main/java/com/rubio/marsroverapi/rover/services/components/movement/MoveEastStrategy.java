@@ -1,4 +1,4 @@
-package com.rubio.marsroverapi.rover.services.components;
+package com.rubio.marsroverapi.rover.services.components.movement;
 
 import com.rubio.marsroverapi.rover.models.Rover;
 import com.rubio.marsroverapi.rover.validations.RoverValidation;
@@ -6,10 +6,10 @@ import com.rubio.marsroverapi.shared.utilities.MapDimensions;
 
 import static com.rubio.marsroverapi.rover.utilities.CircularPosition.backward;
 
-public class MoveNorthStrategy implements MoveStrategy {
+public class MoveEastStrategy implements MoveStrategy {
     private final RoverValidation roverValidation;
 
-    public MoveNorthStrategy(RoverValidation roverValidation) {
+    public MoveEastStrategy(RoverValidation roverValidation) {
         this.roverValidation = roverValidation;
     }
 
