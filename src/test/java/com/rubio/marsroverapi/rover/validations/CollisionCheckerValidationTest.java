@@ -14,9 +14,9 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class CollisionCheckerValidationTest {
     @InjectMocks
-    CollisionCheckerValidation validation;
+    private CollisionCheckerValidation validation;
     @Mock
-    ObstaclePositionService obstaclePositionService;
+    private ObstaclePositionService obstaclePositionService;
 
     @Test
     public void testIsOccupied_WhenIsFalse() {

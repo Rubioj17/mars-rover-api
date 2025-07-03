@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 class RoverMapperImplTest {
     @InjectMocks
-    RoverMapperImpl mapper;
+    private RoverMapperImpl mapper;
 
     private int id;
     private int posX;

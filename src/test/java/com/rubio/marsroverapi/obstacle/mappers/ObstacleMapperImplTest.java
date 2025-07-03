@@ -11,7 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 class ObstacleMapperImplTest {
     @InjectMocks
-    ObstacleMapperImpl mapper;
+    private ObstacleMapperImpl mapper;
 
     @Test
     public void testToDto() {
