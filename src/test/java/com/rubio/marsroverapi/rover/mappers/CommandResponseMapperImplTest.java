@@ -16,9 +16,9 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class CommandResponseMapperImplTest {
     @InjectMocks
-    CommandResponseMapperImpl mapper;
+    private CommandResponseMapperImpl mapper;
     @Mock
-    RoverMapper roverMapper;
+    private RoverMapper roverMapper;
 
     @Test
     public void testToDto() {

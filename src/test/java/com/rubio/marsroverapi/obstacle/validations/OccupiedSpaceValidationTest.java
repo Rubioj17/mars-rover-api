@@ -15,7 +15,7 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 class OccupiedSpaceValidationTest {
     @InjectMocks
-    OccupiedSpaceValidation validation;
+    private OccupiedSpaceValidation validation;
     @Mock
     private ObstacleRepository repository;
     @Mock
