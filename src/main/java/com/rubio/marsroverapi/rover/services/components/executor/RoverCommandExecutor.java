@@ -1,7 +1,9 @@
-package com.rubio.marsroverapi.rover.services.components;
+package com.rubio.marsroverapi.rover.services.components.executor;
 
 import com.rubio.marsroverapi.rover.dto.request.CommandRequestDto;
 import com.rubio.marsroverapi.rover.models.Rover;
+import com.rubio.marsroverapi.rover.services.components.commands.CommandFactory;
+import com.rubio.marsroverapi.rover.services.components.commands.RoverCommand;
 import org.springframework.stereotype.Service;
 
 @Service

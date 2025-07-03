@@ -1,4 +1,4 @@
-package com.rubio.marsroverapi.rover.services.components;
+package com.rubio.marsroverapi.rover.services.components.movement;
 
 import com.rubio.marsroverapi.rover.models.Rover;
 import com.rubio.marsroverapi.rover.validations.RoverValidation;

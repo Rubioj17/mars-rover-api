@@ -1,5 +1,7 @@
-package com.rubio.marsroverapi.rover.services.components;
+package com.rubio.marsroverapi.rover.services.components.commands;
 
+import com.rubio.marsroverapi.rover.services.components.movement.RoverMover;
+import com.rubio.marsroverapi.rover.services.components.rotation.RoverRotator;
 import com.rubio.marsroverapi.shared.exceptions.InvalidCommandException;
 import org.springframework.stereotype.Component;
 
