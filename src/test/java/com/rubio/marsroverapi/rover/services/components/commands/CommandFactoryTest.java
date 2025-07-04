@@ -14,10 +14,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 class CommandFactoryTest {
     @InjectMocks
     private CommandFactory factory;
-    @Mock
-    private RoverMover roverMover;
-    @Mock
-    private RoverRotator roverRotator;
 
     @Test
     public void testGetCommand_WhenIsM() {
