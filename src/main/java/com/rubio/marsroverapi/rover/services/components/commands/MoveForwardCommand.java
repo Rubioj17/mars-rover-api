@@ -14,4 +14,5 @@ public class MoveForwardCommand implements RoverCommand {
     public boolean execute(Rover rover) {
         return roverMover.moveForward(rover);
     }
+
 }

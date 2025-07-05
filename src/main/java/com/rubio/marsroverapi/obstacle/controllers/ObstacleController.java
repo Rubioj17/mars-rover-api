@@ -2,6 +2,7 @@ package com.rubio.marsroverapi.obstacle.controllers;
 
 import com.rubio.marsroverapi.obstacle.dto.ObstacleDto;
 import com.rubio.marsroverapi.obstacle.services.ObstacleService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +26,7 @@ public class ObstacleController {
     }
 
     @PostMapping("/create")//Podria dejarlo sin /create
-    public ResponseEntity<ObstacleDto> createObstacle(@RequestBody ObstacleDto obstacleRequest) {
+    public ResponseEntity<ObstacleDto> createObstacle(@Valid @RequestBody ObstacleDto obstacleRequest) {
         ObstacleDto obstacleResponse = service.createObstacle(obstacleRequest.getPosX(), obstacleRequest.getPosY());
         return new ResponseEntity<>(obstacleResponse, HttpStatus.CREATED);
     }

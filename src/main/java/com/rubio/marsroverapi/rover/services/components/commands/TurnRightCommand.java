@@ -14,4 +14,5 @@ public class TurnRightCommand implements RoverCommand {
     public boolean execute(Rover rover) {
         return roverRotator.rotateRight(rover);
     }
+
 }

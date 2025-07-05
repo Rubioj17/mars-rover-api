@@ -15,12 +15,16 @@ public class MoveNorthStrategy implements MoveStrategy {
 
     @Override
     public boolean move(Rover rover) {
+
         Integer posXRover = rover.getPosX();
         Integer posYRover = backward(rover.getPosY(), MapDimensions.HEIGHT);
+
         if (roverValidation.isOccupied(posXRover, posYRover)) {
             return true;
         }
+
         rover.setPosY(posYRover);
         return false;
     }
+
 }

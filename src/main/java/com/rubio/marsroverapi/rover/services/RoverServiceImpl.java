@@ -10,9 +10,11 @@ import com.rubio.marsroverapi.rover.repositories.RoverRepository;
 import com.rubio.marsroverapi.rover.services.components.executor.RoverCommandExecutor;
 import com.rubio.marsroverapi.shared.exceptions.RoverNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Service
 public class RoverServiceImpl implements RoverService {
     private final RoverRepository repository;
     private final RoverMapper roverMapper;
@@ -20,7 +22,10 @@ public class RoverServiceImpl implements RoverService {
     private final RoverCommandExecutor roverCommandExecutor;
 
     @Autowired
-    public RoverServiceImpl(RoverRepository repository, RoverMapper roverMapper, CommandResponseMapper commandResponseMapper, RoverCommandExecutor roverCommandExecutor) {
+    public RoverServiceImpl(RoverRepository repository, RoverMapper roverMapper,
+                            CommandResponseMapper commandResponseMapper,
+                            RoverCommandExecutor roverCommandExecutor) {
+
         this.repository = repository;
         this.roverMapper = roverMapper;
         this.commandResponseMapper = commandResponseMapper;
@@ -30,9 +35,11 @@ public class RoverServiceImpl implements RoverService {
     @Override
     public RoverDto findRover() {
         Optional<Rover> rover = repository.findById(1);
+
         if (rover.isPresent()) {
             return roverMapper.toDto(rover.get());
         }
+
         throw new RoverNotFoundException(
                 "Rover not found"
         );
@@ -52,4 +59,5 @@ public class RoverServiceImpl implements RoverService {
 
         return responseDto;
     }
+
 }

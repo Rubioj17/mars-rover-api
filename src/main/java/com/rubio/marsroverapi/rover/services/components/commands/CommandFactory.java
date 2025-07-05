@@ -23,4 +23,5 @@ public class CommandFactory {
             default -> throw new InvalidCommandException("Invalid command: " + code);
         };
     }
+
 }

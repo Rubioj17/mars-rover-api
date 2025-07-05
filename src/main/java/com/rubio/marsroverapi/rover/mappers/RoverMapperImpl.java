@@ -2,7 +2,9 @@ package com.rubio.marsroverapi.rover.mappers;
 
 import com.rubio.marsroverapi.rover.dto.RoverDto;
 import com.rubio.marsroverapi.rover.models.Rover;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RoverMapperImpl implements RoverMapper {
 
     @Override

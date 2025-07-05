@@ -17,10 +17,13 @@ public class MoveWestStrategy implements MoveStrategy {
     public boolean move(Rover rover) {
         Integer posXRover = backward(rover.getPosX(), MapDimensions.WIDTH);
         Integer posYRover = rover.getPosY();
+
         if (roverValidation.isOccupied(posXRover, posYRover)) {
             return true;
         }
+
         rover.setPosX(posXRover);
         return false;
     }
+
 }

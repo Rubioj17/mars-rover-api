@@ -8,4 +8,5 @@ public class CircularPosition {
     public static int backward(int current, int length) {
         return (current - 1 + length) % length;
     }
+
 }

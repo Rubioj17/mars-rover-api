@@ -27,4 +27,5 @@ public class RoverController {
     public ResponseEntity<CommandResponseDto> setCommand(@RequestBody CommandRequestDto commandRequest) {
         return ResponseEntity.ok(service.setCommand(commandRequest));
     }
+
 }

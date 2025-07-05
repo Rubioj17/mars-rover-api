@@ -18,10 +18,13 @@ public class MoveSouthStrategy implements MoveStrategy {
     public boolean move(Rover rover) {
         Integer posXRover = rover.getPosX();
         Integer posYRover = forward(rover.getPosY(), MapDimensions.HEIGHT);
+
         if (roverValidation.isOccupied(posXRover, posYRover)) {
             return true;
         }
+
         rover.setPosY(posYRover);
         return false;
     }
+
 }

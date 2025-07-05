@@ -10,8 +10,10 @@ public class CollisionCheckerValidation implements RoverValidation {
     public CollisionCheckerValidation(ObstaclePositionService obstaclePositionService) {
         this.obstaclePositionService = obstaclePositionService;
     }
+
     @Override
     public boolean isOccupied(int posX, int posY) {
         return obstaclePositionService.isObstacleAt(posX, posY);
     }
+
 }

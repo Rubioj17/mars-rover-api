@@ -6,5 +6,6 @@ import com.rubio.marsroverapi.rover.dto.response.CommandResponseDto;
 
 public interface RoverService {
     RoverDto findRover();
+
     CommandResponseDto setCommand(CommandRequestDto commandList);
 }

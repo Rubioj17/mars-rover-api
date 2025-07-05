@@ -28,4 +28,5 @@ public class ObstacleMapperImpl implements ObstacleMapper {
 
         return entity;
     }
+
 }

@@ -19,10 +19,12 @@ public class OccupiedSpaceValidation implements ObstacleValidation {
     public void isValid(int posX, int posY) {
         boolean obstaclePresent = repository.existsByPosXAndPosY(posX, posY);
         boolean roverPresent = roverPositionService.isRoverAt(posX, posY);
+
         if (obstaclePresent || roverPresent) {
             throw new ObstacleCollisionException(
                     "The coordinate (" + posX + ", " + posY + ") is already occupied"
             );
         }
     }
+
 }

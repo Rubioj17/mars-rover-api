@@ -22,4 +22,5 @@ public class RoverRotator {
         rover.setDirection(RoverDirectionEnum.values()[nextDirectionIndex]);
         return false;
     }
+
 }

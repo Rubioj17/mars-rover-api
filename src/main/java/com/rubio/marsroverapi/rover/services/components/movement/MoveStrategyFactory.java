@@ -20,4 +20,5 @@ public class MoveStrategyFactory {
             case SOUTH -> new MoveSouthStrategy(roverValidation);
         };
     }
+
 }

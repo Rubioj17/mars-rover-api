@@ -16,12 +16,16 @@ public class MoveEastStrategy implements MoveStrategy {
 
     @Override
     public boolean move(Rover rover) {
+
         Integer posXRover = forward(rover.getPosX(), MapDimensions.WIDTH);
         Integer posYRover = rover.getPosY();
+
         if (roverValidation.isOccupied(posXRover, posYRover)) {
             return true;
         }
+
         rover.setPosX(posXRover);
         return false;
     }
+
 }

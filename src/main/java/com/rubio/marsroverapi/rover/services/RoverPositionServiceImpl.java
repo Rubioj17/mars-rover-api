@@ -15,4 +15,5 @@ public class RoverPositionServiceImpl implements RoverPositionService {
     public boolean isRoverAt(int posX, int posY) {
         return repository.existsByPosXAndPosY(posX, posY);
     }
+
 }

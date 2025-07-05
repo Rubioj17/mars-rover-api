@@ -18,7 +18,9 @@ public class ObstacleServiceImpl implements ObstacleService {
     private final List<ObstacleValidation> validationList;
 
     @Autowired
-    public ObstacleServiceImpl(ObstacleRepository repository, ObstacleMapper obstacleMapper, List<ObstacleValidation> validationList) {
+    public ObstacleServiceImpl(ObstacleRepository repository, ObstacleMapper obstacleMapper,
+                               List<ObstacleValidation> validationList) {
+
         this.repository = repository;
         this.obstacleMapper = obstacleMapper;
         this.validationList = validationList;
@@ -28,9 +30,11 @@ public class ObstacleServiceImpl implements ObstacleService {
     public List<ObstacleDto> findAllObstacles() {
         List<Obstacle> obstacleList = repository.findAll();
         List<ObstacleDto> obstacleDtoList = new ArrayList<>();
+
         for (Obstacle obstacle : obstacleList) {
             obstacleDtoList.add(obstacleMapper.toDto(obstacle));
         }
+
         return obstacleDtoList;
     }
 
@@ -51,6 +55,8 @@ public class ObstacleServiceImpl implements ObstacleService {
     @Override
     public String deleteAllObstacles() {
         repository.truncateTable();
+
         return "Deleted Successfully";
     }
+
 }
