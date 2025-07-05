@@ -20,7 +20,7 @@ public class RoverInitializer {
     }
 
     @PostConstruct
-    private void initRover() {
+    public void initRover() {
         if (repository.count() == 0) {
             Random random = new Random();
             int posX = random.nextInt(MapDimensions.WIDTH);

@@ -25,7 +25,7 @@ public class ObstacleController {
         return ResponseEntity.ok(service.findAllObstacles());
     }
 
-    @PostMapping("/create")//Podria dejarlo sin /create
+    @PostMapping("/create")
     public ResponseEntity<ObstacleDto> createObstacle(@Valid @RequestBody ObstacleDto obstacleRequest) {
         ObstacleDto obstacleResponse = service.createObstacle(obstacleRequest.getPosX(), obstacleRequest.getPosY());
         return new ResponseEntity<>(obstacleResponse, HttpStatus.CREATED);
