@@ -71,12 +71,16 @@ cd mars-rover-api
 ```
 3. Ejecuta la app (con Maven Wrapper):
 ```bash
+#En Linux
 ./mvnw spring-boot:run
+#En Windows
+./mvnw.cmd spring-boot:run
 ```
 > ⚠️ Para evitar errores con Lombok al compilar o abrir el proyecto:
 > - Si usas IntelliJ IDEA, asegúrate de tener el plugin Lombok instalado y habilitado.
 > - Activa la opción `Enable annotation processing` en:  
   `File > Settings > Build, Execution, Deployment > Compiler > Annotation Processors`.
+> - Tambien fijarse en el `application.properties` para la configuracion de la Base de Datos.
 
 ---
 ## 🧪 Pruebas
